@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarot — Mon App</title>
+  <style>
+    body {font-family:sans-serif; text-align:center; margin-top:50px;}
+    button {padding:10px 20px; font-size:16px;}
+  </style>
+</head>
+<body>
+  <h1>Bienvenue dans mon Tarot</h1>
+  <button id="tirage">Tirer une carte</button>
+  <p id="resultat"></p>
+
+  <script>
+    const cartes = ["Le Bateleur","La Papesse","L'Impératrice","L'Empereur","Le Pape","L'Amoureux","Le Chariot","La Justice","L'Hermite","La Roue de Fortune","La Force","Le Pendu","L'Arcane sans nom","Tempérance","Le Diable","La Maison Dieu","L'Étoile","La Lune","Le Soleil","Le Jugement","Le Monde"];
+    document.getElementById('tirage').onclick = () => {
+      const idx = Math.floor(Math.random()*cartes.length);
+      document.getElementById('resultat').textContent = `Ta carte : ${cartes[idx]}`;
+    };
+  </script>
+</body>
+</html>
